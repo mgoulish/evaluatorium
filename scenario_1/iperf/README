@@ -1,0 +1,24 @@
+Mon May  3 08:19:38 AM EDT 2021
+{
+  1. r_Br
+  2. r_CG
+  3. Record 
+     {
+       CG
+       {
+         iperf output ( manual )
+         iperf CPU    ( watch_iperf )
+       }
+
+       Br
+       {
+         iperf CPU     ( watch_iperf )
+         iftop -u packets -i enp76s0 -t
+       }
+     }
+}
+
+
+
+
+

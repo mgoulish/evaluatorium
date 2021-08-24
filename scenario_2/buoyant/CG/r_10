@@ -1,0 +1,19 @@
+#! /bin/bash
+
+BUOYANT=/home/mick/strest-grpc/release/linux/strest-grpc
+
+CNXS=10
+
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "TEST $count -- ${CNXS} senders -- buoyant"
+  echo "==========================================="
+  ${BUOYANT} client  --latencyUnit us --connections ${CNXS} --iterations 6 --address 10.10.10.1:9966
+  sleep 3
+  count=$(( $count + 1 ))
+done
+
+
+

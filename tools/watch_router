@@ -1,0 +1,12 @@
+#! /bin/bash
+
+
+while [ 1 ] 
+do
+  echo -n "Router ----------------------------------- "
+  seconds
+  PID=`ps -aef | grep qdr | grep -v grep | awk '{print $2}'`
+  echo "Router PID: ${PID}"
+  top -b -p ${PID} -n 1
+  sleep 15
+done

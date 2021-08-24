@@ -1,0 +1,17 @@
+#! /bin/bash
+
+CONCURRENT=10
+
+# 24 hours' worth of 30-second trials.
+
+count=1
+while [ $count -lt 2881 ]
+do
+  echo "==========================================="
+  echo "TEST $count"
+  echo "==========================================="
+  count=$(( $count + 1 ))
+  echo -n "start at: " ; seconds
+  hey -cpus 16 -c ${CONCURRENT}  -z 30s http://10.10.10.2:5801/index.html
+done
+

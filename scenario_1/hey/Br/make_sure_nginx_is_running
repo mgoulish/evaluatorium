@@ -1,0 +1,6 @@
+#! /bin/bash
+
+ps -aef | grep nginx | grep -v grep | wc -l 
+
+# Just do 'sudo nginx'
+

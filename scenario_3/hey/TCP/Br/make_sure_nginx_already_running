@@ -1,0 +1,4 @@
+#! /bin/bash
+
+ps -aef | grep nginx | grep -v grep | grep -v make_sure | wc -l
+

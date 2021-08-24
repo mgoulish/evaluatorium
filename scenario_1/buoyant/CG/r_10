@@ -1,0 +1,17 @@
+#! /bin/bash
+
+BUOYANT=/home/mick/strest-grpc/release/linux/strest-grpc
+
+
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "TEST $count"
+  echo "==========================================="
+  ${BUOYANT} client  --latencyUnit us --connections 10 --iterations 6 --address 10.10.10.1:8765 
+  sleep 3
+  count=$(( $count + 1 ))
+done
+
+

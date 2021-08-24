@@ -1,0 +1,29 @@
+#! /bin/bash
+
+
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "scenario_2 -- 1 sender -- test $count"
+  echo "==========================================="
+  date
+  seconds
+  iperf3 -c 10.10.10.1 -p 5801 -t 60
+  count=$(( $count + 1 ))
+done
+
+
+
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "scenario_2 -- 10 senders -- test $count"
+  echo "==========================================="
+  date
+  seconds
+  iperf3 -c 10.10.10.1 -p 5801 -t 60 -P 10
+  count=$(( $count + 1 ))
+done
+

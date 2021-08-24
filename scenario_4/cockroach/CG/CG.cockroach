@@ -1,0 +1,7 @@
+sudo -s
+
+# Only need to do this once:
+cockroach workload init tpcc postgres://root@10.10.10.1:5801/tpcc?sslmode=disable
+
+cockroach workload run tpcc  postgres://root@10.10.10.1:5801/tpcc?sslmode=disable --duration=1000s
+

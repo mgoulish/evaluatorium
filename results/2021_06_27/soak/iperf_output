@@ -1,0 +1,72 @@
+[mick@Brontonomicon ~]$ ssh mick@colossus-guardian 
+Last login: Sat Jun 26 02:47:04 2021 from 10.10.10.1
+[mick@colossus-guardian ~]$ cd /home/mick/log/dispatch/evaluatorium/scenario_3/hey/TCP/CG
+[mick@colossus-guardian CG]$ l
+total 20K
+-rw-r--r--. 1 mick mick 257 May  4 12:54 CG_router.conf
+-rwxr-xr-x. 1 mick mick 395 May  4 12:48 r_CG_router
+-rwxr-xr-x. 1 mick mick 195 May  4 12:57 r_hey_1
+-rwxr-xr-x. 1 mick mick 196 May  5 09:07 r_hey_10
+-rwxr-xr-x. 1 mick mick 652 Jun 24 12:42 rr
+[mick@colossus-guardian CG]$ cp r_hey_10 ./r_soak
+[mick@colossus-guardian CG]$ v !$
+v ./r_soak
+[mick@colossus-guardian CG]$ ll
+total 24K
+-rw-r--r--. 1 mick mick 257 May  4 12:54 CG_router.conf
+-rwxr-xr-x. 1 mick mick 395 May  4 12:48 r_CG_router
+-rwxr-xr-x. 1 mick mick 195 May  4 12:57 r_hey_1
+-rwxr-xr-x. 1 mick mick 196 May  5 09:07 r_hey_10
+-rwxr-xr-x. 1 mick mick 652 Jun 24 12:42 rr
+-rwxr-xr-x. 1 mick mick 198 Jun 26 02:50 r_soak
+[mick@colossus-guardian CG]$ ./r_soak 
+CONCURRENT == 10
+start at: 1624690383.008492
+
+Summary:
+  Total:	86400.0013 secs
+  Slowest:	1.0118 secs
+  Fastest:	0.0004 secs
+  Average:	0.8620 secs
+  Requests/sec:	16126.8755
+  
+  Total data:	11807350155758 bytes
+  Size/request:	11807350 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.102 [999805]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.203 [24]	|
+  0.304 [30]	|
+  0.405 [30]	|
+  0.506 [47]	|
+  0.607 [57]	|
+  0.708 [1]	|
+  0.810 [2]	|
+  0.911 [2]	|
+  1.012 [1]	|
+
+
+Latency distribution:
+  10% in 0.0005 secs
+  25% in 0.0005 secs
+  50% in 0.0006 secs
+  75% in 0.0006 secs
+  90% in 0.0007 secs
+  95% in 0.0007 secs
+  99% in 0.0008 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0004 secs, 1.0118 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0167 secs, 0.0000 secs, 0.0011 secs
+  resp wait:	0.7808 secs, 0.0003 secs, 1.0117 secs
+  resp read:	0.0432 secs, 0.0000 secs, 0.0021 secs
+
+Status code distribution:
+  [200]	1000000 responses
+
+
+
+stop at: 1624776784.178189
+[mick@colossus-guardian CG]$ 

@@ -1,0 +1,14 @@
+#! /bin/bash
+
+
+while [ 1 ] 
+do
+  echo -n "iperf ----------------------------------- "
+  seconds
+  date
+  # Warning: this assumes only one iperf process is running.
+  PID=`ps -aef | grep "iperf3" | grep -v grep | grep -v "iperf3_testing" | awk '{print $2}'`
+  echo "iperf PID: ${PID}"
+  top -b -p ${PID} -n 1
+  sleep 3
+done

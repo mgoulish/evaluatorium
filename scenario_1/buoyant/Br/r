@@ -1,0 +1,7 @@
+#! /bin/bash
+
+BUOYANT=/home/mick/strest-grpc/release/linux/strest-grpc
+
+${BUOYANT} server --address 10.10.10.1:8765
+
+

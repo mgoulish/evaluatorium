@@ -1,0 +1,13 @@
+#! /bin/bash
+
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "TEST $count"
+  echo "==========================================="
+  ./send 10.10.10.2 5802 addr
+  sleep 3
+  count=$(( $count + 1 ))
+done
+

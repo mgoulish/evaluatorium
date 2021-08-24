@@ -1,0 +1,6 @@
+sudo -s
+cockroach start --insecure --join=node1,node2,node3 --listen-addr=10.10.10.1:5801 &
+
+# Only need to do this once:
+cockroach init  --insecure --host=10.10.10.1:5801
+

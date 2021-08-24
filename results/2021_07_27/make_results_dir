@@ -1,0 +1,30 @@
+#! /bin/bash
+
+mkdir scenario_1
+mkdir scenario_1/hey
+mkdir scenario_1/iperf
+
+mkdir scenario_2
+mkdir scenario_2/hey
+mkdir scenario_2/hey/HTTP
+mkdir scenario_2/hey/TCP
+mkdir scenario_2/iperf
+
+mkdir scenario_3
+mkdir scenario_3/hey
+mkdir scenario_3/iperf
+mkdir scenario_3/hey/HTTP
+mkdir scenario_3/hey/TCP
+
+mkdir scenario_4
+mkdir scenario_4/hey
+mkdir scenario_4/iperf
+mkdir scenario_4/hey/HTTP
+mkdir scenario_4/hey/TCP
+
+mkdir scenario_5
+mkdir scenario_5/hey
+mkdir scenario_5/iperf
+mkdir scenario_5/hey/HTTP
+mkdir scenario_5/hey/TCP
+

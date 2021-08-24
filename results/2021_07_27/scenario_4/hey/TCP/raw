@@ -1,0 +1,493 @@
+
+[mick@colossus-guardian CG]$ ./rr
+===========================================
+scenario_4 -- 1 sender -- test 1
+===========================================
+
+Summary:
+  Total:	60.0008 secs
+  Slowest:	0.0033 secs
+  Fastest:	0.0002 secs
+  Average:	0.0002 secs
+  Requests/sec:	4196.7244
+  
+  Total data:	2133812518 bytes
+  Size/request:	8474 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [251527]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [240]	|
+  0.001 [38]	|
+  0.001 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.003 [0]	|
+  0.003 [0]	|
+  0.003 [1]	|
+
+
+Latency distribution:
+  10% in 0.0002 secs
+  25% in 0.0002 secs
+  50% in 0.0002 secs
+  75% in 0.0002 secs
+  90% in 0.0003 secs
+  95% in 0.0003 secs
+  99% in 0.0003 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0033 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0005 secs
+  resp wait:	0.0002 secs, 0.0001 secs, 0.0025 secs
+  resp read:	0.0000 secs, 0.0000 secs, 0.0007 secs
+
+Status code distribution:
+  [200]	251807 responses
+
+
+
+===========================================
+scenario_4 -- 1 sender -- test 2
+===========================================
+
+Summary:
+  Total:	60.0008 secs
+  Slowest:	0.0028 secs
+  Fastest:	0.0002 secs
+  Average:	0.0002 secs
+  Requests/sec:	4123.1257
+  
+  Total data:	2096391334 bytes
+  Size/request:	8474 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [247112]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [74]	|
+  0.001 [198]	|
+  0.001 [5]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.003 [0]	|
+  0.003 [1]	|
+
+
+Latency distribution:
+  10% in 0.0002 secs
+  25% in 0.0002 secs
+  50% in 0.0002 secs
+  75% in 0.0003 secs
+  90% in 0.0003 secs
+  95% in 0.0003 secs
+  99% in 0.0003 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0028 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0005 secs
+  resp wait:	0.0002 secs, 0.0001 secs, 0.0027 secs
+  resp read:	0.0000 secs, 0.0000 secs, 0.0007 secs
+
+Status code distribution:
+  [200]	247391 responses
+
+
+
+===========================================
+scenario_4 -- 1 sender -- test 3
+===========================================
+
+Summary:
+  Total:	60.0008 secs
+  Slowest:	0.0011 secs
+  Fastest:	0.0002 secs
+  Average:	0.0002 secs
+  Requests/sec:	4002.2979
+  
+  Total data:	2034954834 bytes
+  Size/request:	8474 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [224268]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.000 [15597]	|■■■
+  0.000 [7]	|
+  0.001 [5]	|
+  0.001 [6]	|
+  0.001 [133]	|
+  0.001 [113]	|
+  0.001 [5]	|
+  0.001 [4]	|
+  0.001 [2]	|
+
+
+Latency distribution:
+  10% in 0.0002 secs
+  25% in 0.0002 secs
+  50% in 0.0002 secs
+  75% in 0.0003 secs
+  90% in 0.0003 secs
+  95% in 0.0003 secs
+  99% in 0.0003 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0011 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0005 secs
+  resp wait:	0.0002 secs, 0.0001 secs, 0.0006 secs
+  resp read:	0.0000 secs, 0.0000 secs, 0.0005 secs
+
+Status code distribution:
+  [200]	240141 responses
+
+
+
+===========================================
+scenario_4 -- 1 sender -- test 4
+===========================================
+
+Summary:
+  Total:	60.0004 secs
+  Slowest:	0.0028 secs
+  Fastest:	0.0002 secs
+  Average:	0.0003 secs
+  Requests/sec:	3919.5593
+  
+  Total data:	1992872950 bytes
+  Size/request:	8474 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [234909]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [22]	|
+  0.001 [239]	|
+  0.001 [3]	|
+  0.001 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.002 [0]	|
+  0.003 [1]	|
+
+
+Latency distribution:
+  10% in 0.0002 secs
+  25% in 0.0002 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0003 secs
+  95% in 0.0003 secs
+  99% in 0.0003 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0028 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0004 secs
+  resp wait:	0.0002 secs, 0.0001 secs, 0.0026 secs
+  resp read:	0.0000 secs, 0.0000 secs, 0.0007 secs
+
+Status code distribution:
+  [200]	235175 responses
+
+
+
+===========================================
+scenario_4 -- 1 sender -- test 5
+===========================================
+
+Summary:
+  Total:	60.0003 secs
+  Slowest:	0.0011 secs
+  Fastest:	0.0002 secs
+  Average:	0.0002 secs
+  Requests/sec:	3981.1161
+  
+  Total data:	2024167432 bytes
+  Size/request:	8474 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [194930]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.000 [43666]	|■■■■■■■■■
+  0.000 [4]	|
+  0.001 [1]	|
+  0.001 [9]	|
+  0.001 [32]	|
+  0.001 [189]	|
+  0.001 [24]	|
+  0.001 [6]	|
+  0.001 [6]	|
+
+
+Latency distribution:
+  10% in 0.0002 secs
+  25% in 0.0002 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0003 secs
+  95% in 0.0003 secs
+  99% in 0.0003 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0011 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0007 secs
+  resp wait:	0.0002 secs, 0.0001 secs, 0.0006 secs
+  resp read:	0.0000 secs, 0.0000 secs, 0.0008 secs
+
+Status code distribution:
+  [200]	238868 responses
+
+
+
+===========================================
+scenario_4 -- 10 senders -- test 1
+===========================================
+
+Summary:
+  Total:	60.0011 secs
+  Slowest:	0.0029 secs
+  Fastest:	0.0002 secs
+  Average:	0.0006 secs
+  Requests/sec:	31860.6074
+  
+  Total data:	16199491580 bytes
+  Size/request:	16199 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [995941]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [2334]	|
+  0.001 [1198]	|
+  0.001 [369]	|
+  0.002 [119]	|
+  0.002 [22]	|
+  0.002 [4]	|
+  0.002 [6]	|
+  0.003 [3]	|
+  0.003 [3]	|
+
+
+Latency distribution:
+  10% in 0.0003 secs
+  25% in 0.0003 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0004 secs
+  95% in 0.0004 secs
+  99% in 0.0004 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0029 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0018 secs
+  resp wait:	0.0005 secs, 0.0002 secs, 0.0028 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0012 secs
+
+Status code distribution:
+  [200]	1000000 responses
+
+
+
+===========================================
+scenario_4 -- 10 senders -- test 2
+===========================================
+
+Summary:
+  Total:	60.0006 secs
+  Slowest:	0.0051 secs
+  Fastest:	0.0002 secs
+  Average:	0.0006 secs
+  Requests/sec:	31666.6822
+  
+  Total data:	16100761006 bytes
+  Size/request:	16100 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.001 [998127]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [1618]	|
+  0.002 [227]	|
+  0.002 [13]	|
+  0.003 [5]	|
+  0.003 [0]	|
+  0.004 [0]	|
+  0.004 [0]	|
+  0.005 [1]	|
+  0.005 [8]	|
+
+
+Latency distribution:
+  10% in 0.0003 secs
+  25% in 0.0003 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0004 secs
+  95% in 0.0004 secs
+  99% in 0.0004 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0051 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0013 secs
+  resp wait:	0.0005 secs, 0.0001 secs, 0.0020 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0047 secs
+
+Status code distribution:
+  [200]	1000000 responses
+
+
+
+===========================================
+scenario_4 -- 10 senders -- test 3
+===========================================
+
+Summary:
+  Total:	60.0011 secs
+  Slowest:	0.0040 secs
+  Fastest:	0.0002 secs
+  Average:	0.0006 secs
+  Requests/sec:	31768.0024
+  
+  Total data:	16152418510 bytes
+  Size/request:	16152 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.001 [997668]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [1690]	|
+  0.001 [550]	|
+  0.002 [72]	|
+  0.002 [4]	|
+  0.002 [3]	|
+  0.003 [7]	|
+  0.003 [4]	|
+  0.004 [0]	|
+  0.004 [1]	|
+
+
+Latency distribution:
+  10% in 0.0003 secs
+  25% in 0.0003 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0004 secs
+  95% in 0.0004 secs
+  99% in 0.0004 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0040 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0011 secs
+  resp wait:	0.0005 secs, 0.0001 secs, 0.0023 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0037 secs
+
+Status code distribution:
+  [200]	1000000 responses
+
+
+
+===========================================
+scenario_4 -- 10 senders -- test 4
+===========================================
+
+Summary:
+  Total:	60.0010 secs
+  Slowest:	0.0028 secs
+  Fastest:	0.0002 secs
+  Average:	0.0006 secs
+  Requests/sec:	31717.3039
+  
+  Total data:	16126606706 bytes
+  Size/request:	16126 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [995428]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [2743]	|
+  0.001 [1247]	|
+  0.001 [413]	|
+  0.001 [139]	|
+  0.002 [12]	|
+  0.002 [6]	|
+  0.002 [6]	|
+  0.003 [4]	|
+  0.003 [1]	|
+
+
+Latency distribution:
+  10% in 0.0003 secs
+  25% in 0.0003 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0004 secs
+  95% in 0.0004 secs
+  99% in 0.0004 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0028 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0013 secs
+  resp wait:	0.0005 secs, 0.0002 secs, 0.0018 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0020 secs
+
+Status code distribution:
+  [200]	1000000 responses
+
+
+
+===========================================
+scenario_4 -- 10 senders -- test 5
+===========================================
+
+Summary:
+  Total:	60.0011 secs
+  Slowest:	0.0026 secs
+  Fastest:	0.0002 secs
+  Average:	0.0006 secs
+  Requests/sec:	31779.1265
+  
+  Total data:	16158062194 bytes
+  Size/request:	16158 bytes
+
+Response time histogram:
+  0.000 [1]	|
+  0.000 [994213]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.001 [3881]	|
+  0.001 [1112]	|
+  0.001 [516]	|
+  0.001 [213]	|
+  0.002 [39]	|
+  0.002 [5]	|
+  0.002 [6]	|
+  0.002 [13]	|
+  0.003 [1]	|
+
+
+Latency distribution:
+  10% in 0.0003 secs
+  25% in 0.0003 secs
+  50% in 0.0003 secs
+  75% in 0.0003 secs
+  90% in 0.0004 secs
+  95% in 0.0004 secs
+  99% in 0.0004 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0000 secs, 0.0002 secs, 0.0026 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0000 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0011 secs
+  resp wait:	0.0005 secs, 0.0002 secs, 0.0022 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0013 secs
+
+Status code distribution:
+  [200]	1000000 responses
+
+
+
+[mick@colossus-guardian CG]$ 

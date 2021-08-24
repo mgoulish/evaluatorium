@@ -1,0 +1,7 @@
+#! /bin/bash
+
+CONCURRENT=1
+echo "CONCURRENT == ${CONCURRENT}"
+echo -n "start at: " ; seconds
+hey -cpus 16 -c ${CONCURRENT}  -z 60s http://10.10.10.2:5801/index.html
+echo -n "stop at: " ; seconds

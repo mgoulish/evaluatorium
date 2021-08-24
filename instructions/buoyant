@@ -1,0 +1,101 @@
+
+5 of 2,321
+BuoyantIO grpc stress test
+Inbox
+Ganesh Murthy
+
+Thu, Aug 5, 3:40 PM (6 days ago)
+
+to me
+Hi Mick,
+     Here are some notes on how to set up BuoyantIO
+
+https://github.com/BuoyantIO/strest-grpc
+
+Steps to get the test running
+
+1. git clone https://github.com/BuoyantIO/strest-grpc.git
+2. cd strest-grpc
+3. To build the software do - ./bin/release.sh (this will take a few seconds)
+4. cd release/linux/
+5. ./strest-grpc server (this starts the grpc server which listens on port 11111)
+6. The client connects to server port 11111 by default so start the client
+
+./strest-grpc client  --latencyUnit us --connections 10 --iterations 5    (this is the case where the client connects to the server directly, no router involved)
+
+You will the client output something like the following and exit -
+[gmurthy@localhost linux]$ ./strest-grpc client  --latencyUnit us --connections 10 --iterations 5
+2021-08-05T15:23:12-04:00   0    0.0B 451208/0 10s L:  79 [456 700 ] 6037 J:   0   0
+2021-08-05T15:23:22-04:00   1    0.0B 451923/0 10s L:  77 [455 703 ] 7707 J:   0   0
+2021-08-05T15:23:32-04:00   2    0.0B 413074/0 10s L:  82 [498 762 ] 6342 J:   0   0
+2021-08-05T15:23:42-04:00   3    0.0B 405642/0 10s L:  88 [506 775 ] 3776 J:   0   0
+2021-08-05T15:23:52-04:00   4    0.0B 408059/0 10s L:  80 [501 768 ] 4249 J:   0   0
+{
+  "good": 2129906,
+  "bad": 0,
+  "bytes": 0,
+  "latency": {
+    "p50": 179,
+    "p75": 225,
+    "p90": 404,
+    "p95": 485,
+    "p99": 742,
+    "p999": 7707
+  },
+  "jitter": {
+    "p50": 0,
+    "p75": 0,
+    "p90": 0,
+    "p95": 0,
+    "p99": 0,
+    "p999": 0
+  }
+}
+
+7. Now, start two routers with the attached config files. The second router has a connector to port 11111
+8. Start the client to connect to the router listening port of 9000
+./strest-grpc client  --latencyUnit us --connections 10 --iterations 5 --address localhost:9000
+
+Please look at the documentation in https://github.com/BuoyantIO/strest-grpc for more testing options
+
+The testing numbers look dismal in the two router case (comes in at 14%) for me.
+
+[gmurthy@localhost linux]$ ./strest-grpc client  --latencyUnit us --connections 10 --iterations 5 --address localhost:9000
+2021-08-05T15:30:13-04:00   0    0.0B  54724/0 10s L: 646 [1813 15351 ] 25890 J:   0   0
+2021-08-05T15:30:23-04:00   1    0.0B  54894/0 10s L: 695 [1768 15423 ] 23818 J:   0   0
+2021-08-05T15:30:33-04:00   2    0.0B  54727/0 10s L: 668 [1790 15511 ] 24377 J:   0   0
+2021-08-05T15:30:43-04:00   3    0.0B  54734/0 10s L: 691 [1811 15455 ] 23686 J:   0   0
+2021-08-05T15:30:53-04:00   4    0.0B  54816/0 10s L: 661 [1777 15487 ] 23890 J:   0   0
+{
+  "good": 273895,
+  "bad": 0,
+  "bytes": 0,
+  "latency": {
+    "p50": 1274,
+    "p75": 1403,
+    "p90": 1560,
+    "p95": 1792,
+    "p99": 15439,
+    "p999": 25903
+  },
+  "jitter": {
+    "p50": 0,
+    "p75": 0,
+    "p90": 0,
+    "p95": 0,
+    "p99": 0,
+    "p999": 0
+  }
+}
+
+Michael Goulish <mgoulish@redhat.com>
+
+Sat, Aug 7, 11:09 PM (4 days ago)
+
+to Ganesh
+Thanks! This will be interesting.
+
+
+
+
+

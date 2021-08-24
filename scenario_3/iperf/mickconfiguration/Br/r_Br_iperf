@@ -1,0 +1,6 @@
+#! /bin/bash
+
+echo -n "Start at " ; date
+seconds
+iperf3 -s -p 5801
+

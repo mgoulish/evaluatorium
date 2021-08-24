@@ -1,0 +1,17 @@
+
+1 sender
+  
+  Average    0.3
+  99%        0.3
+  100%       2.5
+  ops/sec    3902
+
+
+10 senders
+  
+  Average    0.6
+  99%        0.4
+  100%       4.9
+  ops/sec    31952
+
+

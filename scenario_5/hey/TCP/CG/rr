@@ -1,0 +1,27 @@
+#! /bin/bash
+
+
+CONCURRENT=1
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "scenario_5 -- 1 sender -- test $count"
+  echo "==========================================="
+  hey -cpus 16 -c ${CONCURRENT}  -z 60s http://192.168.1.125:5801/index.html
+  count=$(( $count + 1 ))
+done
+
+
+CONCURRENT=10
+count=1
+while [ $count -lt 6 ]
+do
+  echo "==========================================="
+  echo "scenario_5 -- 10 senders -- test $count"
+  echo "==========================================="
+  hey -cpus 16 -c ${CONCURRENT}  -z 60s http://192.168.1.125:5801/index.html
+  count=$(( $count + 1 ))
+done
+
+

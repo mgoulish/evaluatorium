@@ -1,0 +1,4 @@
+#! /bin/bash
+
+sudo iftop -u packets -i enp76s0 -t
+
